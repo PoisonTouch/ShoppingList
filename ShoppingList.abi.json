@@ -1,0 +1,60 @@
+{
+	"ABI version": 2,
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "constructor",
+			"inputs": [
+				{"name":"pubkey","type":"uint256"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getShoppingSummary",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"amountOfPaid","type":"uint256"},{"name":"amountOfUnpaid","type":"uint256"},{"name":"allPaidPrice","type":"uint256"}],"name":"summary","type":"tuple"}
+			]
+		},
+		{
+			"name": "getShoppingList",
+			"inputs": [
+			],
+			"outputs": [
+				{"components":[{"name":"id","type":"uint256"},{"name":"name","type":"bytes"},{"name":"amount","type":"uint256"},{"name":"creationDate","type":"uint256"},{"name":"status","type":"bool"},{"name":"price","type":"uint256"}],"name":"purchasesArr","type":"tuple[]"}
+			]
+		},
+		{
+			"name": "addPurchase",
+			"inputs": [
+				{"name":"name","type":"bytes"},
+				{"name":"number","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deletePurchase",
+			"inputs": [
+				{"name":"purchaseID","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buy",
+			"inputs": [
+				{"name":"purchaseID","type":"uint32"},
+				{"name":"priceForAll","type":"uint32"}
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	]
+}

@@ -1,0 +1,250 @@
+{
+	"ABI version": 2,
+	"version": "2.1",
+	"header": ["pubkey", "time", "expire"],
+	"functions": [
+		{
+			"name": "setStat",
+			"inputs": [
+				{"components":[{"name":"amountOfPaid","type":"uint256"},{"name":"amountOfUnpaid","type":"uint256"},{"name":"allPaidPrice","type":"uint256"}],"name":"stat","type":"tuple"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getShoppingList",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getShoppingList_",
+			"inputs": [
+				{"components":[{"name":"id","type":"uint256"},{"name":"name","type":"string"},{"name":"amount","type":"uint256"},{"name":"creationDate","type":"uint256"},{"name":"status","type":"bool"},{"name":"price","type":"uint256"}],"name":"purchasesArr","type":"tuple[]"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deletePurchase",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "deletePurchase_",
+			"inputs": [
+				{"name":"numOfDeletedPurchase","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buy",
+			"inputs": [
+				{"name":"index","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buy_",
+			"inputs": [
+				{"name":"idOfBought","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buyToKnowPrice",
+			"inputs": [
+				{"name":"isItBought","type":"bool"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "buy__",
+			"inputs": [
+				{"name":"price","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "setShoppingCode",
+			"inputs": [
+				{"name":"code","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onError",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onSuccess",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "start",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotInfo",
+			"id": "0xDEB",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"name","type":"string"},
+				{"name":"version","type":"string"},
+				{"name":"publisher","type":"string"},
+				{"name":"key","type":"string"},
+				{"name":"author","type":"string"},
+				{"name":"support","type":"address"},
+				{"name":"hello","type":"string"},
+				{"name":"language","type":"string"},
+				{"name":"dabi","type":"string"},
+				{"name":"icon","type":"bytes"}
+			]
+		},
+		{
+			"name": "getRequiredInterfaces",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"interfaces","type":"uint256[]"}
+			]
+		},
+		{
+			"name": "savePublicKey",
+			"inputs": [
+				{"name":"value","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "checkStatus",
+			"inputs": [
+				{"name":"acc_type","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "sendMoneyToAccToInit",
+			"inputs": [
+				{"name":"value","type":"address"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onErrorRepeatCredit",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "waitBeforeDeploy",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "checkIfAccIsUninitialized",
+			"inputs": [
+				{"name":"acc_type","type":"int8"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "onErrorRepeatDeploy",
+			"inputs": [
+				{"name":"sdkError","type":"uint32"},
+				{"name":"exitCode","type":"uint32"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "upgrade",
+			"inputs": [
+				{"name":"state","type":"cell"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "getDebotOptions",
+			"inputs": [
+			],
+			"outputs": [
+				{"name":"options","type":"uint8"},
+				{"name":"debotAbi","type":"string"},
+				{"name":"targetAbi","type":"string"},
+				{"name":"targetAddr","type":"address"}
+			]
+		},
+		{
+			"name": "setABI",
+			"inputs": [
+				{"name":"dabi","type":"string"}
+			],
+			"outputs": [
+			]
+		},
+		{
+			"name": "constructor",
+			"inputs": [
+			],
+			"outputs": [
+			]
+		}
+	],
+	"data": [
+	],
+	"events": [
+	],
+	"fields": [
+		{"name":"_pubkey","type":"uint256"},
+		{"name":"_timestamp","type":"uint64"},
+		{"name":"_constructorFlag","type":"bool"},
+		{"name":"m_options","type":"uint8"},
+		{"name":"m_debotAbi","type":"optional(string)"},
+		{"name":"m_targetAbi","type":"optional(string)"},
+		{"name":"m_target","type":"optional(address)"},
+		{"name":"m_icon","type":"bytes"},
+		{"name":"m_shoppingCode","type":"cell"},
+		{"name":"m_address","type":"address"},
+		{"components":[{"name":"amountOfPaid","type":"uint256"},{"name":"amountOfUnpaid","type":"uint256"},{"name":"allPaidPrice","type":"uint256"}],"name":"m_stat","type":"tuple"},
+		{"name":"m_purchaseId","type":"uint32"},
+		{"name":"m_masterPubKey","type":"uint256"},
+		{"name":"m_msigAddress","type":"address"},
+		{"name":"INITIAL_BALANCE","type":"uint32"},
+		{"name":"value","type":"uint256"},
+		{"components":[{"name":"id","type":"uint256"},{"name":"name","type":"string"},{"name":"amount","type":"uint256"},{"name":"creationDate","type":"uint256"},{"name":"status","type":"bool"},{"name":"price","type":"uint256"}],"name":"purchaseMapping","type":"map(uint32,tuple)"}
+	]
+}
